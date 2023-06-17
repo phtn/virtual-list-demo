@@ -1,8 +1,12 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
+// import "./globals.css";
+import { Poppins } from "next/font/google";
 import { Nav } from "@/components/Nav";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["200", "500"],
+  style: "normal",
+});
 
 export const metadata = {
   title: "VirtualizedList Demo",
@@ -17,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${poppins.className}`} style={{ margin: 0 }}>
         <Nav />
         {children}
       </body>

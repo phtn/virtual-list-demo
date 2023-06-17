@@ -1,24 +1,43 @@
 "use client";
 import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import styled from "styled-components";
+import { pink, lightBlue, purple, blueGrey } from "@mui/material/colors";
+import { Container } from "@mui/system";
+import { Toolbar, Typography } from "@mui/material";
+import { styled } from "styled-components";
 
+const Title = styled.span`
+  font-size: 24px;
+  font-family: "Poppins-Bold";
+  color: ${lightBlue[50]};
+`;
 export const Nav = () => {
   return (
-    <main>
-      <AppBar position="static" color="primary" sx={{ padding: 2 }}>
-        <Box
-          sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
-        >
-          <Avatar alt="logo" src="vr.png" sx={{ mr: 3 }} />
-          <Typography variant="h6">Virtualized List</Typography>
-        </Box>
-        <Box sx={{ pt: 3 }}>Heoyo</Box>
+    <>
+      <AppBar
+        position="fixed"
+        elevation={2}
+        sx={{
+          px: 5,
+          margin: 0,
+          bgcolor: "rgba(244,143,177,0.9)",
+        }}
+      >
+        <Container maxWidth="xl">
+          <Toolbar>
+            <Avatar
+              alt="logo"
+              src="sticky-note.png"
+              variant="square"
+              sx={{ mr: 3 }}
+            />
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Title> Virtualized List</Title>
+            </Link>
+          </Toolbar>
+        </Container>
       </AppBar>
-    </main>
+    </>
   );
 };
