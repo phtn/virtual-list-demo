@@ -2,15 +2,14 @@
 import AppBar from "@mui/material/AppBar";
 import Avatar from "@mui/material/Avatar";
 import Link from "next/link";
-import { pink, lightBlue, purple, blueGrey } from "@mui/material/colors";
+import { blueGrey, lightBlue } from "@mui/material/colors";
 import { Container } from "@mui/system";
-import { Toolbar, Typography } from "@mui/material";
+import { Toolbar } from "@mui/material";
 import { styled } from "styled-components";
 
 const Title = styled.span`
-  font-size: 24px;
-  font-family: "Poppins-Bold";
-  color: ${lightBlue[50]};
+  font-size: 1.25em;
+  color: ${blueGrey[50]};
 `;
 export const Nav = () => {
   return (
